@@ -1,0 +1,5 @@
+.env*
+
+## temp for modeling and learning
+privateGPT.py
+ingest.py
