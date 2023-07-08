@@ -2,12 +2,19 @@ import tkinter as tk
 
 def update_read_only_panel(event):
     content = text_entry.get("1.0", "end-1c")  # Get the text from the text box
-    read_only_panel.config(state="normal")  # Enable editing of the read-only panel
+    read_only_panel.config(state="normal")  # enable text entry for the read-only panel
     read_only_panel.delete("1.0", "end")  # Clear the read-only panel
     read_only_panel.insert("1.0", content)  # Insert the content from the text box
-    read_only_panel.config(state="disabled")  # Disable editing of the read-only panel
+    # read_only_panel.config(state="disabled")  # Disable editing of the read-only panel
+
+def switch_focus(event):
+    if event.widget == text_entry:
+        read_only_panel.focus_set()
+    else:
+        text_entry.focus_set()
 
 root = tk.Tk()
+root.title("quant_ai")
 root.geometry("800x600")  # Set the initial size of the window
 
 # Create the main container
@@ -31,5 +38,11 @@ main_container.grid_rowconfigure(0, weight=1)
 
 # Bind the update function to the KeyRelease event of the text entry
 text_entry.bind("<KeyRelease>", update_read_only_panel)
+
+# Bind the switch_focus function to the Command-] and Command-[ events
+text_entry.bind("<Command-]>", switch_focus)
+read_only_panel.bind("<Command-]>", switch_focus)
+text_entry.bind("<Command-[>", switch_focus)
+read_only_panel.bind("<Command-[>", switch_focus)
 
 root.mainloop()
