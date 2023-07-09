@@ -3,3 +3,9 @@
 ## temp for modeling and learning
 privateGPT.py
 ingest.py
+
+load_data/*
+!/load_data/README.md
+
+models/*
+!/models/README.md

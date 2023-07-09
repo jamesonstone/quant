@@ -4,7 +4,6 @@ version = "0.0.1"
 description = ""
 authors = ["J.Stone"]
 readme = "README.md"
-packages = [{include = "quant_ai"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

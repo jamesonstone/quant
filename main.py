@@ -39,10 +39,28 @@ main_container.grid_rowconfigure(0, weight=1)
 # Bind the update function to the KeyRelease event of the text entry
 text_entry.bind("<KeyRelease>", update_read_only_panel)
 
-# Bind the switch_focus function to the Command-] and Command-[ events
+# Bind the switch_focus function to the Command-] and Command-[m events
 text_entry.bind("<Command-]>", switch_focus)
 read_only_panel.bind("<Command-]>", switch_focus)
 text_entry.bind("<Command-[>", switch_focus)
 read_only_panel.bind("<Command-[>", switch_focus)
 
+# Create a list of options for the dropdown box
+options = ["OpenAI_GPT3.5", "OpenAI_GPT4", "LlamaCpp", "GPT4All"]
+
+# Create a StringVar to store the selected option
+selected_option = tk.StringVar()
+
+# Set the default value of the StringVar to the first option
+selected_option.set(options[0])
+
+# Create the label for the dropdown box
+dropdown_label = tk.Label(main_container, text="Select an option:")
+dropdown_label.grid(row=1, column=0, sticky="e")
+
+# Create the dropdown box
+dropdown = tk.OptionMenu(main_container, selected_option, *options)
+dropdown.grid(row=1, column=1, sticky="w")
+
 root.mainloop()
+
