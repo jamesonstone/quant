@@ -22,7 +22,7 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
-from constants.constants import CHROMA_SETTINGS
+from constants import CHROMA_SETTINGS
 
 load_dotenv() # load environment variables
 
