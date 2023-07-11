@@ -9,3 +9,6 @@ load_data/*
 
 models/*
 !/models/README.md
+
+*.pyc
+__pycache__/
