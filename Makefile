@@ -3,11 +3,11 @@ run:
 .PHONY: run
 
 ## Test porting of privateGPT
-test-gpt-load:
-	python3 ./loaders/loader.py
+test-loader:
+	python3 ./quant/loaders/base_loader.py
 .PHONY: test-gpt-load
 
-test-gpt-run:
+test-run:
 	python3 ./engine/gpt4all.py
 .PHONY: test-gpt-run
 ##############################

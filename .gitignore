@@ -1,14 +1,10 @@
 .env*
 
-## temp for modeling and learning
-privateGPT.py
-ingest.py
+quant/load_data/*
+!/quant/load_data/README.md
 
-load_data/*
-!/load_data/README.md
-
-models/*
-!/models/README.md
+quant/models/*
+!/quant/models/README.md
 
 *.pyc
 __pycache__/
