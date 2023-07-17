@@ -5,13 +5,13 @@
 from dotenv import load_dotenv
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.callbacks.streaming)stdout import StreamingStdOutCallbackHandler
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.vectorstores import Chroma
 from langchain.llms import GPT4All, LlamaCpp
 import os
 import argparse
 import time
-from constants import CHROMA_SETTINGS
+from quant.constants.constants import CHROMA_SETTINGS
 
 load_dotenv() # load environment variables
 

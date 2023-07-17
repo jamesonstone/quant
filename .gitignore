@@ -8,3 +8,6 @@ quant/models/*
 
 *.pyc
 __pycache__/
+
+db/
+.chroma/
