@@ -8,8 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 chromadb = "0.3.23"
-langchain = "0.0.197"
+langchain = "0.0.235"
 python-dotenv = "1.0.0"
+gpt4all = "1.0.5"
 llama-cpp-python = "0.1.50"
 urllib3 = "2.0.2"
 PyMuPDF = "1.22.3"
@@ -21,7 +22,7 @@ pypandoc = "1.11"
 tqdm = "4.65.0"
 pyqt5 = "5.15.9"
 markdown = "3.4.3"
-pyqtwebengine = "5.15.6"
+pyqtwebengine = "^5.15.6"
 
 
 [build-system]

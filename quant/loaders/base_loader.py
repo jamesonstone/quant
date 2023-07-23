@@ -135,7 +135,7 @@ def main():
   if does_vectorstore_exist(persist_directory):
     print(f"Appending to existing vectorstore in {persist_directory}")
     # update local vectorstore
-    db = Chroma(persist_directory=persist_directory, embeddings=embeddings, client_settings=CHROMA_SETTINGS)
+    db = Chroma(persist_directory=persist_directory, client_settings=CHROMA_SETTINGS)
     collection = db.get()
     texts = process_documents([metadata['source'] for metadata in collection['metadatas']])
     print(f"🚚 Please wait while embeddings are created...")
